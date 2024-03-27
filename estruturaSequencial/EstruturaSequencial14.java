@@ -22,22 +22,22 @@ public class EstruturaSequencial14 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Quanto você ganha por hora? ");
-        double salarioPorHora = sc.nextDouble();
-        System.out.println("E o número de horas trabalhadas no mês? ");
-        double horasMensaisTrabalhadas = sc.nextDouble();
-
-        double salarioBruto = salarioPorHora * horasMensaisTrabalhadas;
-        double impostoDeRenda = salarioBruto * 0.11;
-        double inss = salarioBruto * 0.08;
-        double sindicato = salarioBruto * 0.05;
-        double descontos = inss + impostoDeRenda + sindicato;
-        double salarioLiquido = salarioBruto - descontos;
-
-        System.out.printf("Seu salário bruto é R$ %.2f, o imposto de renda sobre seu salário é de R$ %.2f, as taxas do sindicato e do INSS são R$ %.2f e R$ %.2f, respectivamente. %n", salarioBruto, impostoDeRenda, sindicato, inss);
-        System.out.printf("Seu salário líquido após os descontos é: R$ %.2f\n", salarioLiquido);
-
-        sc.close();
+        System.out.println("How much do you earn per hour? ");
+        double hourlyWage = sc.nextDouble();
+        System.out.println("And the number of hours worked per month? ");
+        double monthlyHoursWorked = sc.nextDouble();
+        
+        double grossSalary = hourlyWage * monthlyHoursWorked;
+        double incomeTax = grossSalary * 0.11;
+        double inss = grossSalary * 0.08;
+        double unionFee = grossSalary * 0.05;
+        double deductions = inss + incomeTax + unionFee;
+        double netSalary = grossSalary - deductions;
+        
+        System.out.printf("Your gross salary is $ %.2f, the income tax on your salary is $ %.2f, the union and INSS fees are $ %.2f and $ %.2f, respectively. %n", grossSalary, incomeTax, unionFee, inss);
+        System.out.printf("Your net salary after deductions is: $ %.2f\n", netSalary);
+        
+        sc.close();        
     }
 }
 
