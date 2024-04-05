@@ -30,23 +30,22 @@ public class estruturaCondicional11 {
         double reajuste;
 
         if (salario <= 280) {
-          novoSalario = salario * 0.20;
+          novoSalario = salario * 1.20;
           percentual = "20%";
         }
         else if (salario <= 700){
-          novoSalario = salario * 0.15;
+          novoSalario = salario * 1.15;
           percentual = "15%";
         }
         else if (salario <= 1500){
-          novoSalario = salario * 0.10;
+          novoSalario = salario * 1.10;
           percentual = "10%";
         }
         else {
-          novoSalario = salario * 0.05;
+          novoSalario = salario * 1.05;
           percentual = "5%";
         }
 
-        novoSalario += salario;
         reajuste = novoSalario - salario;
 
         // salário antes do reajuste
