@@ -11,10 +11,18 @@ import java.util.*;
 
 public class estruturaCondicional23 {
     public static void main(String[] args) {
-	    Locale.setDefault(Locale.US);
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
+        System.out.println("Informe um número: ");
+        double numero = sc.nextDouble();
+
+        if (numero == Math.round(numero)) {
+            System.out.println("Número inteiro.");
+        } else {
+            System.out.println("Número decimal.");
+        }
 
         sc.close();
-        }
+    }
 }

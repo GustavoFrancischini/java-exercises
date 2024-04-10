@@ -22,7 +22,7 @@ import java.util.*;
 
 public class estruturaCondicional14 {
     public static void main(String[] args) {
-	Locale.setDefault(Locale.US);
+	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite a primeira nota: ");
         int primeiraNota = sc.nextInt();

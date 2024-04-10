@@ -11,12 +11,12 @@ import java.util.*;
 
 public class estruturaCondicional13 {
     public static void main(String[] args) {
-	Locale.setDefault(Locale.US);
+	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um número de 1 a 7: ");
         int numeroDigitado = sc.nextInt();
 
-        String diaDaSemana = "Valor inválido";
+        String diaDaSemana = "";
 
         switch (numeroDigitado) {
             case 1:

@@ -19,8 +19,14 @@ public class estruturaCondicional21 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        
+        System.out.println("Qual valor do saque? ");
+        int saque = sc.nextInt();
+        if (saque < 10 || saque > 600) {
+            System.out.println("Valor mínimo: 10 reais e Valor máximo: 600 reais. Tente novamente.");
+            System.exit(0);
+        }
 
+        
         sc.close();
         }
 }
