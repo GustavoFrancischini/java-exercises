@@ -24,51 +24,48 @@ public class estruturaCondicional25 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Telefonou para a vítima? (S/N)");
-        char telefonou = sc.next().toUpperCase().charAt(0);
-        System.out.println("Esteve no local do crime? (S/N)");
-        char local = sc.next().toUpperCase().charAt(0);
-        System.out.println("Mora perto da vítima? (S/N)");
-        char mora = sc.next().toUpperCase().charAt(0);
-        System.out.println("Devia para a vítima? (S/N)");
-        char devia = sc.next().toUpperCase().charAt(0);
-        System.out.println("Já trabalhou com a vítima? (S/N)");
-        char trabalhou = sc.next().toUpperCase().charAt(0);
-
-        int soma = 0;
-
-        if (telefonou == 'S') {
-            soma += 1;
+        System.out.println("Did you call the victim? (Y/N)");
+        char calledVictim = sc.next().toUpperCase().charAt(0);
+        System.out.println("Did you go to the crime scene? (Y/N)");
+        char wentToScene = sc.next().toUpperCase().charAt(0);
+        System.out.println("Do you live near the victim? (Y/N)");
+        char liveNearVictim = sc.next().toUpperCase().charAt(0);
+        System.out.println("Do you owe money to the victim? (Y/N)");
+        char oweMoney = sc.next().toUpperCase().charAt(0);
+        System.out.println("Have you worked with the victim before? (Y/N)");
+        char workedWithVictim = sc.next().toUpperCase().charAt(0);
+        
+        int sum = 0;
+        
+        if (calledVictim == 'Y') {
+            sum += 1;
         }
-        if (local == 'S') {
-            soma += 1;
+        if (wentToScene == 'Y') {
+            sum += 1;
         }
-        if(mora == 'S') {
-            soma += 1;
+        if (liveNearVictim == 'Y') {
+            sum += 1;
         }
-        if(devia == 'S') {
-            soma += 1;
+        if (oweMoney == 'Y') {
+            sum += 1;
         }
-        if (trabalhou == 'S' ) {
-            soma += 1;
+        if (workedWithVictim == 'Y') {
+            sum += 1;
         }
-
-        String classificacao = "";
-
-        if (soma == 2) {
-            classificacao = "Suspeita";
+        
+        String classification;
+        
+        if (sum == 2) {
+            classification = "Suspect";
+        } else if (sum >= 3 && sum <= 4) {
+            classification = "Accomplice";
+        } else if (sum == 5) {
+            classification = "Assassin";
+        } else {
+            classification = "Innocent";
         }
-        else if (soma == 3 || soma == 4) {
-            classificacao = "Cúmplice";
-        }
-        else if (soma == 5) {
-            classificacao = "Assasino";
-        }
-        else{
-            classificacao = "Inocente";
-        }
-
-        System.out.println(classificacao);
+        
+        System.out.println(classification);        
 
         sc.close();
         }

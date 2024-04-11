@@ -31,46 +31,45 @@ import java.util.*;
 
 public class estruturaCondicional12 {
     public static void main(String[] args) {
-	Locale.setDefault(Locale.US);
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Informe seu salário por hora: ");
-        int salarioPorHora = sc.nextInt();
-        System.out.println("Informe quantas horas trabalhou no mês: ");
-        int horasMensais = sc.nextInt();
-        int salario = horasMensais * salarioPorHora;
-        double impostoDeRenda;
-        String taxaIR;
-
-        if(salario <= 900) {
-                impostoDeRenda = 0.0;
-                taxaIR = "(ISENTO)";
+        System.out.println("Enter your hourly wage: ");
+        int hourlySalary = sc.nextInt();
+        System.out.println("Enter how many hours you worked in the month: ");
+        int monthlyHours = sc.nextInt();
+        int salary = monthlyHours * hourlySalary;
+        double incomeTax;
+        String taxRate;
+        
+        if(salary <= 900) {
+                incomeTax = 0.0;
+                taxRate = "(EXEMPT)";
         }
-        else if(salario <= 1500) {
-                impostoDeRenda = salario * 0.05;
-                taxaIR = "(5%)";
+        else if(salary <= 1500) {
+                incomeTax = salary * 0.05;
+                taxRate = "(5%)";
         }
-        else if(salario <= 2500) {
-                impostoDeRenda = salario * 0.10;
-                taxaIR = "(10%)";
+        else if(salary <= 2500) {
+                incomeTax = salary * 0.10;
+                taxRate = "(10%)";
         }
         else{
-                impostoDeRenda = salario * 0.20;
-                taxaIR = "(20%)";
+                incomeTax = salary * 0.20;
+                taxRate = "(20%)";
         }
-
-        double descontoINSS = salario * 0.05;
-        double descontoFGTS = salario * 0.11;
-        double descontoSindicato = salario * 0.03;
-        double salarioLiquido = salario - impostoDeRenda - descontoINSS - descontoSindicato;
-
-        System.out.printf("Salário bruto: %d %n", salario);
-        System.out.printf("Imposto de renda %s: %.2f %n", taxaIR, impostoDeRenda);
-        System.out.printf("INSS (5%%): %.2f%n", descontoINSS);
-        System.out.printf("FGTS (11%%): %.2f%n", descontoFGTS);
-        System.out.printf("Sindicato (3%%): %.2f %n", descontoSindicato);
-        System.out.printf("Salário Liquido: %.2f ", salarioLiquido);
-
-
+        
+        double INSSDiscount = salary * 0.05;
+        double FGTSDiscount = salary * 0.11;
+        double unionFee = salary * 0.03;
+        double netSalary = salary - incomeTax - INSSDiscount - unionFee;
+        
+        System.out.printf("Gross salary: %d %n", salary);
+        System.out.printf("Income tax %s: %.2f %n", taxRate, incomeTax);
+        System.out.printf("INSS (5%%): %.2f%n", INSSDiscount);
+        System.out.printf("FGTS (11%%): %.2f%n", FGTSDiscount);
+        System.out.printf("Union fee (3%%): %.2f %n", unionFee);
+        System.out.printf("Net salary: %.2f ", netSalary);
+        
         sc.close(); 
-	}
+        }
 }

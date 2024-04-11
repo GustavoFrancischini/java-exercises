@@ -25,45 +25,46 @@ public class estruturaCondicional26 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Qual combústivel você deseja? (G/A)");
-        char combustivel = sc.nextLine().toLowerCase().charAt(0);
-        System.out.println("Quantos litros você deseja? ");
-        int litros = sc.nextInt();
-
-        double desconto = 0;
-        double valorLitro = 0;
-        double valorTotal = 0;
-
-        if (combustivel == 'g') {
-            valorLitro = 2.50;
-            valorTotal = valorLitro * litros;
-            if (litros <= 20) {
-                desconto = 0.04;
-            }
-            else{
-                desconto = 0.06;
-            }
-        }
-        else if (combustivel == 'a') {
-            valorLitro = 1.90;
-            valorTotal = valorLitro * litros;
-            if (litros <= 20) {
-                desconto = 0.03;
-            }
-            else{
-                desconto = 0.05;
-            }
-        }
-        else{
-            System.out.println("Digite somente as letras válidas para os combústiveis.");
-            System.exit(0);
-        }
-
+        System.out.println("Which fuel do you want? (G/A)");
+        char fuelType = sc.next().toLowerCase().charAt(0);
+        System.out.println("How many liters do you want?");
+        int liters = sc.nextInt();
         
-        double descontoFinal = valorTotal * desconto;
-        valorTotal = valorTotal - descontoFinal;
-
-        System.out.println(valorTotal);
+        if (liters <= 0) {
+            System.out.println("The number of liters must be a positive number.");
+            sc.close();
+            return;
+        }
+        
+        double discount = 0;
+        double pricePerLiter = 0;
+        double totalPrice = 0;
+        
+        if (fuelType == 'g') {
+            pricePerLiter = 2.50;
+            if (liters <= 20) {
+                discount = 0.04;
+            } else {
+                discount = 0.06;
+            }
+        } else if (fuelType == 'a') {
+            pricePerLiter = 1.90;
+            if (liters <= 20) {
+                discount = 0.03;
+            } else {
+                discount = 0.05;
+            }
+        } else {
+            System.out.println("Please enter only valid letters for fuels.");
+            sc.close();
+            return;
+        }
+        
+        totalPrice = pricePerLiter * liters;
+        double finalDiscount = totalPrice * discount;
+        totalPrice -= finalDiscount;
+        
+        System.out.println(totalPrice);        
 
         sc.close();
         }

@@ -20,26 +20,26 @@ public class estruturaCondicional15 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Por favor, insira os tamanhos dos lados do triângulo: ");
-        System.out.println("Lado 1: ");
-        int lado1 = sc.nextInt();
-        System.out.println("Lado 2: ");
-        int lado2 = sc.nextInt();
-        System.out.println("Lado 3: ");
-        int lado3 = sc.nextInt();
-        
-        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
-            if (lado1 == lado2 && lado1 == lado3) {
-                System.out.println("Triângulo Equilátero: três lados iguais.");
-            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
-                System.out.println("Triângulo Isósceles: quaisquer dois lados iguais.");
+        System.out.println("Please, enter the lengths of the triangle sides: ");
+        System.out.println("Side 1: ");
+        int side1 = sc.nextInt();
+        System.out.println("Side 2: ");
+        int side2 = sc.nextInt();
+        System.out.println("Side 3: ");
+        int side3 = sc.nextInt();
+
+        if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+            if (side1 == side2 && side1 == side3) {
+                System.out.println("Equilateral Triangle: three equal sides.");
+            } else if (side1 == side2 || side1 == side3 || side2 == side3) {
+                System.out.println("Isosceles Triangle: any two equal sides.");
             } else {
-                System.out.println("Triângulo Escaleno: três lados diferentes.");
+                System.out.println("Scalene Triangle: three different sides.");
             }
         } else {
-            System.out.println("Não é um triângulo.");
+            System.out.println("It is not a triangle.");
         }
-        
+
         sc.close();
     }
 }

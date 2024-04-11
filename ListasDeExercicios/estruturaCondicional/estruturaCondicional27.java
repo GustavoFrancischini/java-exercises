@@ -22,41 +22,45 @@ public class estruturaCondicional27 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Informe a quantidade em Kg de morangos desejada: ");
-        double morango = sc.nextInt();
-        System.out.println("Informe a quantidade em Kg de maçãs desejada: ");
-        double maca = sc.nextInt();
-
-        double kgFrutas = morango + maca;
-        double desconto = 0;
-        double valorTotal = 0;
-        double valorTotalC = 0;
-        double valorTotalM = 0;
+        System.out.println("Enter the desired quantity of strawberries in kg: ");
+        double strawberries = sc.nextInt();
+        System.out.println("Enter the desired quantity of apples in kg: ");
+        double apples = sc.nextInt();
         
-        if (morango <= 5) {
-            valorTotalM = morango * 2.50;
+        if (strawberries <= 0 || apples <= 0) {
+            System.out.println("The quantity of fruits must be a positive number.");
+            sc.close();
+            return;
         }
-        else{
-            valorTotalM = morango * 2.20;
+        
+        double totalKg = strawberries + apples;
+        double discount = 0;
+        double totalPrice = 0;
+        double totalApplePrice = 0;
+        double totalStrawberryPrice = 0;
+        
+        if (strawberries <= 5) {
+            totalStrawberryPrice = strawberries * 2.50;
+        } else {
+            totalStrawberryPrice = strawberries * 2.20;
         }
-
-        if (maca <= 5) {
-            valorTotalC = maca * 1.80;
+        
+        if (apples <= 5) {
+            totalApplePrice = apples * 1.80;
+        } else {
+            totalApplePrice = apples * 1.50;
         }
-        else{
-            valorTotalC = maca * 1.50;
+        
+        totalPrice = totalApplePrice + totalStrawberryPrice;
+        
+        if (totalKg > 8 || totalPrice > 25) {
+            discount = totalPrice * 0.10;
         }
-
-        valorTotal = valorTotalC + valorTotalM;
-
-        if (kgFrutas > 8 || valorTotal > 25) {
-            desconto = valorTotal * 0.10;
-        }
-
-        valorTotal = valorTotal - desconto;
-
-        System.out.printf("O valor total a ser pago é: %.2f", valorTotal);
-
+        
+        totalPrice -= discount;
+        
+        System.out.printf("The total amount to be paid is: %.2f", totalPrice);
+        
         sc.close();
         }
 }

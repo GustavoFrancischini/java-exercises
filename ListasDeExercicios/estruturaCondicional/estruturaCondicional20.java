@@ -18,33 +18,33 @@ public class estruturaCondicional20 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Informe a primeira nota: ");
-        double nota1 = sc.nextDouble();
-        System.out.println("Informe a segunda nota: ");
-        double nota2 = sc.nextDouble();
-        System.out.println("Informe a terceira nota: ");
-        double nota3 = sc.nextDouble();
-
-        if (nota1 + nota2 + nota3 > 30 || nota1 + nota2 + nota3 < 0) {
-            System.out.println("Insira notas válidas. Max: 10 e Min: 0.");
+        System.out.println("Enter the first grade: ");
+        double grade1 = sc.nextDouble();
+        System.out.println("Enter the second grade: ");
+        double grade2 = sc.nextDouble();
+        System.out.println("Enter the third grade: ");
+        double grade3 = sc.nextDouble();
+        
+        if (grade1 + grade2 + grade3 > 30 || grade1 + grade2 + grade3 < 0) {
+            System.out.println("Please enter valid grades. Max: 10 and Min: 0.");
             System.exit(0);
         }
-
-        double media = (nota1 + nota2 + nota3) / 3;
-        String status = "";
-
-        if (media >= 10) {
-            status = "Aprovado com Distinção";
+        
+        double average = (grade1 + grade2 + grade3) / 3;
+        String status;
+        
+        if (average >= 10) {
+            status = "Approved with Distinction";
         }
-        else if(media >= 7){
-            status = "Aprovado";
+        else if (average >= 7){
+            status = "Approved";
         }
         else{
-            status = "Reprovado.";
+            status = "Failed.";
         }
         
         System.out.println(status);
-
-        sc.close();
-        }
-}
+        
+        sc.close();        
+    }
+}    

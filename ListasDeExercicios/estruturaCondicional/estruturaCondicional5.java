@@ -12,21 +12,21 @@ public class estruturaCondicional5 {
 		Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite a primeira nota: ");
-        double nota1 = sc.nextDouble();
-        System.out.println("Digite a segunda nota: ");
-        double nota2 = sc.nextDouble();
+        System.out.println("Enter the first grade: ");
+        double grade1 = sc.nextDouble();
+        System.out.println("Enter the second grade: ");
+        double grade2 = sc.nextDouble();
 
-        double media = (nota1 + nota2) / 2;
+        double average = (grade1 + grade2) / 2;
 
-        if(media >= 7){
-            System.out.println("Aprovado.");
+        if(average >= 7){
+            System.out.println("Approved.");
         }
-        else if(media == 10){
-            System.out.println("Aprovado com distinção.");
+        else if(average == 10){
+            System.out.println("Approved with distinction.");
         }
         else{
-            System.out.println("Reprovado.");
+            System.out.println("Failed.");
         }
     sc.close(); 
 	}

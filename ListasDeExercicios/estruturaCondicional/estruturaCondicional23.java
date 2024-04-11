@@ -14,15 +14,15 @@ public class estruturaCondicional23 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Informe um número: ");
-        double numero = sc.nextDouble();
-
-        if (numero == Math.round(numero)) {
-            System.out.println("Número inteiro.");
+        System.out.println("Enter a number: ");
+        double number = sc.nextDouble();
+        
+        if (number == Math.round(number)) {
+            System.out.println("Integer number.");
         } else {
-            System.out.println("Número decimal.");
+            System.out.println("Decimal number.");
         }
-
-        sc.close();
+        
+        sc.close();        
     }
 }

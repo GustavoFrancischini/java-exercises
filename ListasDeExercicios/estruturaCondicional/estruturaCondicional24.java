@@ -17,57 +17,57 @@ public class estruturaCondicional24 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Digite o primeiro número: ");
+        System.out.println("Enter the first number: ");
         double num1 = sc.nextDouble();
-        
-        System.out.println("Digite o segundo número: ");
+
+        System.out.println("Enter the second number: ");
         double num2 = sc.nextDouble();
-        
-        System.out.println("Escolha a operação (1 para adição, 2 para subtração, 3 para multiplicação, 4 para divisão): ");
-        int operacao = sc.nextInt();
-        
-        double resultado = 0;
-        String tipoNumero = "";
-        
-        switch (operacao) {
+
+        System.out.println("Choose the operation (1 for addition, 2 for subtraction, 3 for multiplication, 4 for division): ");
+        int operation = sc.nextInt();
+
+        double result = 0;
+        String numberType = "";
+
+        switch (operation) {
             case 1:
-                resultado = num1 + num2;
+                result = num1 + num2;
                 break;
             case 2:
-                resultado = num1 - num2;
+                result = num1 - num2;
                 break;
             case 3:
-                resultado = num1 * num2;
+                result = num1 * num2;
                 break;
             case 4:
-                resultado = num1 / num2;
+                result = num1 / num2;
                 break;
             default:
-                System.out.println("Operação inválida!");
+                System.out.println("Invalid operation!");
                 sc.close();
                 return;
         }
-        
-        if (resultado % 2 == 0) {
-            tipoNumero += "par, ";
+
+        if (result % 2 == 0) {
+            numberType += "even, ";
         } else {
-            tipoNumero += "ímpar, ";
+            numberType += "odd, ";
         }
-        
-        if (resultado >= 0) {
-            tipoNumero += "positivo, ";
+
+        if (result >= 0) {
+            numberType += "positive, ";
         } else {
-            tipoNumero += "negativo, ";
+            numberType += "negative, ";
         }
-        
-        if (resultado == Math.round(resultado)) {
-            tipoNumero += "inteiro.";
+
+        if (result == Math.round(result)) {
+            numberType += "integer.";
         } else {
-            tipoNumero += "decimal.";
+            numberType += "decimal.";
         }
-        
-        System.out.println("O resultado da operação é: " + resultado);
-        System.out.println("O número resultante é " + tipoNumero);
+
+        System.out.println("The result of the operation is: " + result);
+        System.out.println("The resulting number is " + numberType);
 
         sc.close();
     }

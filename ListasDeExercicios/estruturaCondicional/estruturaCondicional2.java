@@ -9,17 +9,17 @@ public class estruturaCondicional2 {
 		Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Informe um número inteiro: ");
+        System.out.println("Enter an integer number: ");
         int number1 = sc.nextInt();
 
         if(number1 > 0){
-            System.out.printf("%d é um número positivo.", number1);
+            System.out.printf("%d is a positive number.", number1);
         }
         else if (number1 == 0){
-            System.out.printf("%d é um zero.", number1);
+            System.out.printf("%d is zero.", number1);
         }
         else{
-            System.out.printf("%d é um número negativo.", number1);
+            System.out.printf("%d is a negative number.", number1);
         }
 
     sc.close(); 

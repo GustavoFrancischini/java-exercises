@@ -18,34 +18,34 @@ public class estruturaCondicional19 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Informe um número inteiro menor que 1000: ");
-        String numeroStr = sc.next();
+        System.out.println("Enter an integer less than 1000: ");
+        String numberStr = sc.next();
 
-        if (numeroStr.length() < 3) {
-            System.out.println("Por favor, insira um número de pelo menos três dígitos. Use o 0 caso não tenha centena ou dezena.");
+        if (numberStr.length() < 3) {
+            System.out.println("Please, enter a number with at least three digits. Use 0 if there is no hundred or ten.");
             System.exit(0);
         }
 
-        char centena = numeroStr.charAt(0);
-        char dezena = numeroStr.charAt(1);
-        char unidade = numeroStr.charAt(2);
+        char hundred = numberStr.charAt(0);
+        char ten = numberStr.charAt(1);
+        char unit = numberStr.charAt(2);
 
-        if (centena == '1') {
-            System.out.printf("%s centena", centena);
+        if (hundred == '1') {
+            System.out.printf("%s hundred", hundred);
         } else {
-            System.out.printf("%s centenas", centena);
+            System.out.printf("%s hundreds", hundred);
         }
 
-        if (dezena == '1') {
-            System.out.printf(" %s dezena", dezena);
+        if (ten == '1') {
+            System.out.printf(" %s ten", ten);
         } else {
-            System.out.printf(" %s dezenas", dezena);
+            System.out.printf(" %s tens", ten);
         }
 
-        if (unidade == '1') {
-            System.out.printf(" e %s unidade.", unidade);
+        if (unit == '1') {
+            System.out.printf(" and %s unit.", unit);
         } else {
-            System.out.printf(" e %s unidades.", unidade);
+            System.out.printf(" and %s units.", unit);
         }
 
         sc.close();

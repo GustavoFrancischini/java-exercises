@@ -11,42 +11,42 @@ import java.util.*;
 
 public class estruturaCondicional13 {
     public static void main(String[] args) {
-	    Locale.setDefault(Locale.US);
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um número de 1 a 7: ");
-        int numeroDigitado = sc.nextInt();
-
-        String diaDaSemana = "";
-
-        switch (numeroDigitado) {
+        System.out.println("Enter a number from 1 to 7: ");
+        int numberEntered = sc.nextInt();
+        
+        String dayOfWeek = "";
+        
+        switch (numberEntered) {
             case 1:
-                diaDaSemana = "1 - Domingo";
+                dayOfWeek = "1 - Sunday";
                 break;
             case 2:
-                diaDaSemana = "2 - Segunda-feira";
+                dayOfWeek = "2 - Monday";
                 break;
             case 3:
-                diaDaSemana = "3 - Terça-feira";
+                dayOfWeek = "3 - Tuesday";
                 break;
             case 4:
-                diaDaSemana = "4 - Quarta-feira";
+                dayOfWeek = "4 - Wednesday";
                 break;
             case 5:
-                diaDaSemana = "5 - Quinta-feira";
+                dayOfWeek = "5 - Thursday";
                 break;
             case 6:
-                diaDaSemana = "6 - Sexta-feira";
+                dayOfWeek = "6 - Friday";
                 break;
             case 7:
-                diaDaSemana = "7 - Sábado";
+                dayOfWeek = "7 - Saturday";
                 break;
             default:
-                diaDaSemana = "Valor inválido";
+                dayOfWeek = "Invalid value";
                 break;
         }
-
-        System.out.println(diaDaSemana);
-
-        sc.close();
+        
+        System.out.println(dayOfWeek);
+        
+        sc.close();        
         }
 }

@@ -10,27 +10,27 @@ public class estruturaCondicional8 {
 		Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Informe o valor do primeiro produto: ");
-        double produto1 = sc.nextDouble();
-        System.out.println("Informe o valor do segundo produto: ");
-        double produto2 = sc.nextDouble();
-        System.out.println("Informe o valor do terceiro produto: ");
-        double produto3 = sc.nextDouble();
+        System.out.println("Enter the value of the first product: ");
+        double product1 = sc.nextDouble();
+        System.out.println("Enter the value of the second product: ");
+        double product2 = sc.nextDouble();
+        System.out.println("Enter the value of the third product: ");
+        double product3 = sc.nextDouble();
 
-        if(produto1 < produto2 && produto1 < produto3){
-            System.out.println("Compre o primeiro produto, pois é o mais barato.");
+        if(product1 < product2 && product1 < product3){
+            System.out.println("Buy the first product, as it is the cheapest.");
         }
-        else if(produto2 < produto1 && produto2 < produto3){
-            System.out.println("Compre o segundo produto, pois é o mais barato.");
+        else if(product2 < product1 && product2 < product3){
+            System.out.println("Buy the second product, as it is the cheapest.");
         }
-        else if(produto3 < produto1 && produto3 < produto2){
-            System.out.println("Compre o terceiro produto, pois é o mais barato.");
+        else if(product3 < product1 && product3 < product2){
+            System.out.println("Buy the third product, as it is the cheapest.");
         }
-        else if (produto1 == produto2 && produto1 == produto3) {
-            System.out.println("Todos os produtos possuem o mesmo valor.");
+        else if (product1 == product2 && product1 == product3) {
+            System.out.println("All products have the same value.");
         }
         else {
-            System.out.println("Dois ou mais produtos possuem o mesmo valor.");
+            System.out.println("Two or more products have the same value.");
         }
 
         sc.close(); 

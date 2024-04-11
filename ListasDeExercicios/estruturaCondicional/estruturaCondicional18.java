@@ -12,36 +12,36 @@ public class estruturaCondicional18 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite uma data no formato dd/mm/aaaa: ");
-        String data = sc.nextLine();
-
-        String[] partes = data.split("/");
-        int dia = Integer.parseInt(partes[0]);
-        int mes = Integer.parseInt(partes[1]);
-        int ano = Integer.parseInt(partes[2]);
-
-        boolean dataValida = true;
-
-        if (mes < 1 || mes > 12 || dia < 1 || ano <= 0) {
-            dataValida = false;
+        System.out.println("Enter a date in the format dd/mm/yyyy: ");
+        String date = sc.nextLine();
+        
+        String[] parts = date.split("/");
+        int day = Integer.parseInt(parts[0]);
+        int month = Integer.parseInt(parts[1]);
+        int year = Integer.parseInt(parts[2]);
+        
+        boolean validDate = true;
+        
+        if (month < 1 || month > 12 || day < 1 || year <= 0) {
+            validDate = false;
         } else {
-            int diasNoMes = 31; // Assume 31 dias por padrão
-            if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
-                diasNoMes = 30;
-            } else if (mes == 2) {
-                diasNoMes = (ano % 4 == 0 && (ano % 100 != 0 || ano % 400 == 0)) ? 29 : 28;
+            int daysInMonth = 31; 
+            if (month == 4 || month == 6 || month == 9 || month == 11) {
+                daysInMonth = 30;
+            } else if (month == 2) {
+                daysInMonth = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) ? 29 : 28;
             }
-            if (dia > diasNoMes) {
-                dataValida = false;
+            if (day > daysInMonth) {
+                validDate = false;
             }
         }
-
-        if (dataValida) {
-            System.out.println("A data é válida.");
+        
+        if (validDate) {
+            System.out.println("The date is valid.");
         } else {
-            System.out.println("A data é inválida.");
-        }
-
+            System.out.println("The date is invalid.");
+        }       
+         
         sc.close();
     }
 }

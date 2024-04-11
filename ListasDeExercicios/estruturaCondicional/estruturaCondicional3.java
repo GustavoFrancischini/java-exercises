@@ -10,17 +10,17 @@ public class estruturaCondicional3 {
 		Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Informe seu gênero, sendo 'M' para masculino e 'F' para feminino: ");
+        System.out.println("Enter your gender, 'M' for male and 'F' for female: ");
         char gender = sc.next().toUpperCase().charAt(0);
 
         if(gender == 'M'){
-            System.out.printf("M - Masculino", gender);
+            System.out.printf("M - Male", gender);
         }
         else if (gender == 'F'){
-            System.out.printf("F - Feminino", gender);
+            System.out.printf("F - Female", gender);
         }
         else{
-            System.out.printf("Sexo inválido.");
+            System.out.printf("Invalid gender.");
         }
 
     sc.close(); 

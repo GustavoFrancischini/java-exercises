@@ -19,32 +19,32 @@ public class estruturaCondicional16 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Informe o primeiro valor: ");
-        double valor1 = sc.nextDouble();
-        if (valor1 == 0){
-            System.out.println("A equação não é do segundo grau.");
+        System.out.println("Enter the first value: ");
+        double value1 = sc.nextDouble();
+        if (value1 == 0){
+            System.out.println("The equation is not quadratic.");
             System.exit(0);
         }
-        System.out.println("Informe o segundo valor: ");
-        double valor2 = sc.nextDouble();
-        System.out.println("Informe o terceiro valor: ");
-        double valor3 = sc.nextDouble();
+        System.out.println("Enter the second value: ");
+        double value2 = sc.nextDouble();
+        System.out.println("Enter the third value: ");
+        double value3 = sc.nextDouble();
 
         double x = 1;
-        String print = "";
+        String print;
 
-        double delta = (valor1 * Math.pow(x, 2)) + (valor2 * x) + valor3;
+        double delta = (value1 * Math.pow(x, 2)) + (value2 * x) + value3;
 
         if (delta < 0){
-            print = "A equação não possui raízes reais.";
+            print = "The equation has no real roots.";
         }
         else if (delta == 0) {
-            print = "A equação possui apenas uma raíz real.";
+            print = "The equation has only one real root.";
         }
         else{
-            print = "A equação possui duas raiz reais.";
+            print = "The equation has two real roots.";
         }
-
+        
         System.out.println(print);
 
         sc.close();

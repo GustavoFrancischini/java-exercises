@@ -24,45 +24,45 @@ public class estruturaCondicional14 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite a primeira nota: ");
-        int primeiraNota = sc.nextInt();
-        System.out.println("Digite a segunda nota: ");
-        int segundaNota = sc.nextInt();
-
-        double media = (primeiraNota + segundaNota) / 2;
-        String conceito = "";
-        String resultado= "";
-
-        if (media >= 9.0 && media <= 10) {
-            conceito = "Conceito: A";
+        System.out.println("Enter the first grade: ");
+        int firstGrade = sc.nextInt();
+        System.out.println("Enter the second grade: ");
+        int secondGrade = sc.nextInt();
+        
+        double average = (firstGrade + secondGrade) / 2;
+        String concept = "";
+        String result;
+        
+        if (average >= 9.0 && average <= 10) {
+            concept = "Concept: A";
         }
-        else if (media >= 7.5 && media < 9.0) {
-            conceito = "Conceito: B";
+        else if (average >= 7.5 && average < 9.0) {
+            concept = "Concept: B";
         }
-        else if (media >= 6.0 && media < 7.5) {
-            conceito = "Conceito: C";
+        else if (average >= 6.0 && average < 7.5) {
+            concept = "Concept: C";
         }
-        else if (media >= 4.0 && media < 6.0) {
-            conceito = "Conceito: D";
+        else if (average >= 4.0 && average < 6.0) {
+            concept = "Concept: D";
         }
-        else if (media >= 0 && media < 4.0) {
-            conceito = "Conceito: E";
+        else if (average >= 0 && average < 4.0) {
+            concept = "Concept: E";
         }        
         else{
-            System.out.println("Digite somente notas válidas.");
+            System.out.println("Enter only valid grades.");
             System.exit(0);
         }
-
-        if(media < 6){
-            resultado = "Reprovado!";
+        
+        if(average < 6){
+            result = "Failed!";
         }
         else{
-            resultado = "Aprovado!";
+            result = "Approved!";
         }
-
-        System.out.printf("Média: %.2f - %s - %s", media, conceito, resultado);
         
-
+        System.out.printf("Average: %.2f - %s - %s", average, concept, result);
+        
+        
         sc.close();
         }
 }

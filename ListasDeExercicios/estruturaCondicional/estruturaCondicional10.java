@@ -11,23 +11,23 @@ public class estruturaCondicional10 {
 		Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Informe o turno que você estuda: ");
-        System.out.println("M - Matutino: ");
-        System.out.println("V - Verspertino: ");
-        System.out.println("N - Noturno: ");
-        char turno = sc.next().toUpperCase().charAt(0);
+        System.out.println("Enter the shift you study in: ");
+        System.out.println("M - Morning: ");
+        System.out.println("A - Afternoon: ");
+        System.out.println("E - Evening: ");
+        char shift = sc.next().toUpperCase().charAt(0);
         
-        if(turno == 'M'){
-            System.out.println("Bom dia!");
+        if(shift == 'M'){
+            System.out.println("Good morning!");
         }
-        else if(turno == 'V'){
-            System.out.println("Boa tarde!");
+        else if(shift == 'A'){
+            System.out.println("Good afternoon!");
         }
-        else if(turno == 'N'){
-            System.out.println("Boa noite!");
+        else if(shift == 'E'){
+            System.out.println("Good evening!");
         }
         else{
-            System.out.println("Letra inválida.");
+            System.out.println("Invalid letter.");
         }
         sc.close(); 
 	}

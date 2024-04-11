@@ -22,41 +22,41 @@ import java.util.*;
 public class estruturaCondicional11 {
     public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Informe seu salário: ");
-        double salario = sc.nextDouble();
-        double novoSalario;
-        String percentual;
-        double reajuste;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter your salary: ");
+    double salary = sc.nextDouble();
+    double newSalary;
+    String percentage;
+    double increase;
 
-        if (salario <= 280) {
-          novoSalario = salario * 1.20;
-          percentual = "20%";
-        }
-        else if (salario <= 700){
-          novoSalario = salario * 1.15;
-          percentual = "15%";
-        }
-        else if (salario <= 1500){
-          novoSalario = salario * 1.10;
-          percentual = "10%";
-        }
-        else {
-          novoSalario = salario * 1.05;
-          percentual = "5%";
-        }
+    if (salary <= 280) {
+      newSalary = salary * 1.20;
+      percentage = "20%";
+    }
+    else if (salary <= 700){
+      newSalary = salary * 1.15;
+      percentage = "15%";
+    }
+    else if (salary <= 1500){
+      newSalary = salary * 1.10;
+      percentage = "10%";
+    }
+    else {
+      newSalary = salary * 1.05;
+      percentage = "5%";
+    }
 
-        reajuste = novoSalario - salario;
+    increase = newSalary - salary;
 
-        // salário antes do reajuste
-        System.out.printf("Seu salário inicial: R$ %.2f%n", salario);
-        // percentual de aumento aplicado
-        System.out.println("Percentual de aumento aplicado: " + percentual);
-        // o valor do aumento
-        System.out.printf("Valor do aumento: R$ %.2f%n", reajuste);
-        // e o novo salário, após o aumento
-        System.out.printf("Novo salário: R$ %.2f", novoSalario);
+    // original salary
+    System.out.printf("Your initial salary: $%.2f%n", salary);
+    // percentage increase applied
+    System.out.println("Percentage increase applied: " + percentage);
+    // the value of the increase
+    System.out.printf("Value of the increase: $%.2f%n", increase);
+    // and the new salary after the increase
+    System.out.printf("New salary: $%.2f", newSalary);
 
-        sc.close(); 
+    sc.close(); 
 	}
 }
