@@ -22,7 +22,40 @@ public class estruturaCondicional27 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        System.out.println("Informe a quantidade em Kg de morangos desejada: ");
+        double morango = sc.nextInt();
+        System.out.println("Informe a quantidade em Kg de maçãs desejada: ");
+        double maca = sc.nextInt();
 
+        double kgFrutas = morango + maca;
+        double desconto = 0;
+        double valorTotal = 0;
+        double valorTotalC = 0;
+        double valorTotalM = 0;
+        
+        if (morango <= 5) {
+            valorTotalM = morango * 2.50;
+        }
+        else{
+            valorTotalM = morango * 2.20;
+        }
+
+        if (maca <= 5) {
+            valorTotalC = maca * 1.80;
+        }
+        else{
+            valorTotalC = maca * 1.50;
+        }
+
+        valorTotal = valorTotalC + valorTotalM;
+
+        if (kgFrutas > 8 || valorTotal > 25) {
+            desconto = valorTotal * 0.10;
+        }
+
+        valorTotal = valorTotal - desconto;
+
+        System.out.printf("O valor total a ser pago é: %.2f", valorTotal);
 
         sc.close();
         }

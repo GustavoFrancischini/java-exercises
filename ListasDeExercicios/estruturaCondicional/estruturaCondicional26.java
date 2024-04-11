@@ -25,7 +25,45 @@ public class estruturaCondicional26 {
     public static void main(String[] args) {
 	    Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-    
+        System.out.println("Qual combústivel você deseja? (G/A)");
+        char combustivel = sc.nextLine().toLowerCase().charAt(0);
+        System.out.println("Quantos litros você deseja? ");
+        int litros = sc.nextInt();
+
+        double desconto = 0;
+        double valorLitro = 0;
+        double valorTotal = 0;
+
+        if (combustivel == 'g') {
+            valorLitro = 2.50;
+            valorTotal = valorLitro * litros;
+            if (litros <= 20) {
+                desconto = 0.04;
+            }
+            else{
+                desconto = 0.06;
+            }
+        }
+        else if (combustivel == 'a') {
+            valorLitro = 1.90;
+            valorTotal = valorLitro * litros;
+            if (litros <= 20) {
+                desconto = 0.03;
+            }
+            else{
+                desconto = 0.05;
+            }
+        }
+        else{
+            System.out.println("Digite somente as letras válidas para os combústiveis.");
+            System.exit(0);
+        }
+
+        
+        double descontoFinal = valorTotal * desconto;
+        valorTotal = valorTotal - descontoFinal;
+
+        System.out.println(valorTotal);
 
         sc.close();
         }
