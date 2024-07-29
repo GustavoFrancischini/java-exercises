@@ -9,19 +9,18 @@ public class EstruturaRepeticao2 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Informe o nome do usuário: ");
+        
+        System.out.println("Enter your username: ");
         String user = sc.next();
-        System.out.println("Informe a senha: ");
-        String senha = sc.next();
-
-
-        while(user.equals(senha)) {
-            System.out.println("A senha não pode ser igual ao nome de usuário. Digite outra: ");
-            senha = sc.next();
+        System.out.println("Enter your password: ");
+        String password = sc.next();
+        
+        while (user.equals(password)) {
+            System.out.println("Your password cannot be the same as your username. Please enter your password again: ");
+            password = sc.next();
         }
-
-        System.out.println("Conta criada!");
-
+        
+        System.out.println("Account successfully created!");
+        sc.close();
     }
 }
