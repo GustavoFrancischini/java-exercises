@@ -17,64 +17,64 @@ public class EstruturaRepeticao3 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-
-        String nome;
+        
+        String name;
         while (true) {
-            System.out.print("Nome (maior que 3 caracteres): ");
-            nome = sc.nextLine();
-            if (nome.length() > 3) {
+            System.out.print("Name (more than 3 characters): ");
+            name = sc.nextLine();
+            if (name.length() > 3) {
                 break;
             } else {
-                System.out.println("Nome deve ter mais que 3 caracteres.");
+                System.out.println("Name must have more than 3 characters.");
             }
         }
-        int idade;
+        int age;
         while (true) {
-            System.out.print("Idade (entre 0 e 150): ");
-            idade = sc.nextInt();
-            if (idade >= 0 && idade <= 150) {
+            System.out.print("Age (between 0 and 150): ");
+            age = sc.nextInt();
+            if (age >= 0 && age <= 150) {
                 break;
             } else {
-                System.out.println("Idade deve ser entre 0 e 150.");
+                System.out.println("Age must be between 0 and 150.");
             }
         }
-        double salario;
+        double salary;
         while (true) {
-            System.out.print("Salário (maior que zero): ");
-            salario = sc.nextDouble();
-            if (salario > 0) {
+            System.out.print("Salary (greater than zero): ");
+            salary = sc.nextDouble();
+            if (salary > 0) {
                 break;
             } else {
-                System.out.println("Salário deve ser maior que zero.");
+                System.out.println("Salary must be greater than zero.");
             }
         }
-        char sexo;
+        char gender;
         while (true) {
-            System.out.print("Sexo (f ou m): ");
-            sexo = sc.next().charAt(0);
-            if (sexo == 'f' || sexo == 'm') {
+            System.out.print("Gender (f or m): ");
+            gender = sc.next().charAt(0);
+            if (gender == 'f' || gender == 'm') {
                 break;
             } else {
-                System.out.println("Sexo deve ser 'f' ou 'm'.");
+                System.out.println("Gender must be 'f' or 'm'.");
             }
         }
-        char estadoCivil;
+        char maritalStatus;
         while (true) {
-            System.out.print("Estado Civil (s, c, v, d): ");
-            estadoCivil = sc.next().charAt(0);
-            if (estadoCivil == 's' || estadoCivil == 'c' || estadoCivil == 'v' || estadoCivil == 'd') {
+            System.out.print("Marital Status (s, c, v, d): ");
+            maritalStatus = sc.next().charAt(0);
+            if (maritalStatus == 's' || maritalStatus == 'c' || maritalStatus == 'v' || maritalStatus == 'd') {
                 break;
             } else {
-                System.out.println("Estado Civil deve ser 's', 'c', 'v' ou 'd'.");
+                System.out.println("Marital Status must be 's', 'c', 'v' or 'd'.");
             }
         }
-        System.out.println("Informações validadas:");
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("Salário: " + salario);
-        System.out.println("Sexo: " + sexo);
-        System.out.println("Estado Civil: " + estadoCivil);
-
+        System.out.println("Validated information:");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+        System.out.println("Gender: " + gender);
+        System.out.println("Marital Status: " + maritalStatus);
+        
         sc.close();
     }
 }
