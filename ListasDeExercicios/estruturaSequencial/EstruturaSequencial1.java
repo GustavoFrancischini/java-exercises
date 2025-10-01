@@ -8,5 +8,3 @@ public class EstruturaSequencial1 {
 		System.out.println("Alô, mundo!");
 	}
 }
-
-
