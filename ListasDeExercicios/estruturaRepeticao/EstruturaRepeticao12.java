@@ -21,5 +21,7 @@ public class EstruturaRepeticao12 {
         for (int i : list) {
             System.out.println(num + " x " + i + " = " + (num * i));
         }
+
+        sc.close();
     }
 }
